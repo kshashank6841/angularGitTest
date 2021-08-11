@@ -25,7 +25,7 @@ function twoInputRange()
                 range_max = $(this).parent().children('.range_max'),
                 minVal = parseInt($(minBtn).val()),
                 maxVal = parseInt($(maxBtn).val()),
-                origin = $(this).context.className;
+                origin = $(this).className;
 
             if(origin === 'min' && minVal > maxVal-5){
                 $(minBtn).val(maxVal-5);

@@ -1,1 +1,0 @@
-function myFun(){alert("Hey! you got it")}
