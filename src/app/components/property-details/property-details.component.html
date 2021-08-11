@@ -1,0 +1,136 @@
+<div>
+  <img src="{{images}}" alt="property-image" style="width:100%; height:400px;">
+</div>
+
+<h1 style="position:absolute; color: white; margin-top: -100px; margin-left:50px; box-shadow: 2px solid gray;">
+  {{name}}
+</h1>
+<div style="position:absolute; color: white; margin-top: -50px; margin-left:50px; word-wrap: normal; width: 260px;">
+Latitude : {{lat}}
+Longitude : {{lon}}</div>
+
+<div style="position:absolute; color: white; margin-top: -50px; font-weight: 500; font-size:16px; margin-left:1150px; word-wrap: normal; width: 150px;">
+  Offered at: {{cost}}
+</div> 
+<div style=" width: 70%; text-align: center; ">
+<h6 >Description</h6>
+<p>This historic block, once home to windsor Diary, is now the stomping grounds for tastemakers,
+  fun seekers and seasoned regulars. From the encicing atmosphere of The Alley to handcrafted food and
+  beverage; Diary Block comes to the life more you explore.
+</p>
+
+
+<!-- <div class="details">
+ 
+  <div class="rows">
+    <div>
+      <label for="">Building Class</label>
+      <h6>{{buildingClass}}</h6>
+    </div>
+    <div>
+      <label for="">Square Feet</label>
+      <h6>{{squareFeet}}</h6>
+    </div>
+    <div>
+      <label for="">Zoning</label>
+      <h6>{{zoning}}</h6>
+    </div>
+
+  </div>
+
+  <div  class="rows">
+    <div>
+      <label for="">Year Build</label>
+      <h6>{{YearBill}}</h6>
+    </div>
+    <div>
+      <label for="">Market</label>
+      <h6>{{market}}</h6>
+    </div>
+    <div>
+      <label for="">Suit Number</label>
+      <h6>{{suitNumber}}</h6>
+    </div>
+
+  </div>
+
+  <div  class="rows">
+    <div>
+      <label for="">Submarket</label>
+      <h6>{{submarket}}</h6>
+    </div>
+    <div>
+      <label for="">Tenancy</label>
+      <h6>{{tenancy}}</h6>
+    </div>
+    <div>
+      <label for="">Property Type</label>
+      <h6>{{propertyType}}</h6>
+    </div>
+
+  </div>
+</div> -->
+<h6 > Details</h6>
+</div>
+<div style="display:flex;">
+ 
+<table class="details">
+
+  <tr>
+  <th>Building Class</th>
+  <th>Square Feet</th>
+  <th>Zoning</th>
+  </tr>
+  <td>{{buildingClass}}</td>
+  <td>{{squareFeet}}</td>
+  <td>{{zoning}}</td>
+<tr>
+   <th>Year Build</th>
+  <th>Market</th>
+  <th>Tenancy</th></tr>
+  <td>{{YearBill}}</td>
+<td>{{market}}</td>
+<td>{{tenancy}}</td>
+<tr>
+   <th>Submarket</th>
+  <th>Suit Number</th>
+  <th>Property Type</th></tr>
+  <td>{{submarket}}</td>
+  <td>{{suitNumber}}</td>
+  <td>{{propertyType}}</td>
+</table>
+
+  <!-- <table class="table" style="margin: 10px 0 0 20px ; width: 600px; align-content: center; justify-content: center;">
+    <thead class="thead-dark" style="background: rgb(15, 14, 78); color:white; width: 180px;">
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Name</th>
+        <th scope="col">Latitude</th>
+        <th scope="col">Longitude</th>
+        <th scope="col">Cost</th>
+        <th scope="col">Image Location</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+
+        <td>{{id}}</td>
+        <td>{{name}}</td>
+        <td>{{lat}}</td>
+        <td>{{lon}}</td>
+        <td>{{cost}}</td>
+        <td>{{imgLocation}}</td>
+      </tr>
+
+    </tbody>
+  </table> -->
+
+<div class="aside">
+  <br style="line-height: 2px;">
+<button> BUY Property</button>
+<br style="line-height: 2px;">
+<button>Sell Property</button>
+<p> Less than {{cost}}. Apply for Loan now. <a href="">Click here</a></p>
+</div>
+
+<div>

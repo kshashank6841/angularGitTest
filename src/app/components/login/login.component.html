@@ -1,0 +1,43 @@
+<body>
+
+
+  <section class="header">
+  <nav>
+    <a href="/"><img src="../assets/images/logoo.png" alt="Logo" style="border-radius:10px; background-color: rgb(2, 27, 21) ; height: 60px; width: 80px;" ></a>
+  </nav>
+   
+</section>
+
+  <form  #userForm="ngForm" (ngSubmit)="onSubmit(userForm.value)" >
+
+    <div class="container">
+      <input type="text" placeholder="Email address" name="uname" id="email" [(ngModel)]="email" required>
+    </div>
+    <div class="container2">
+      <input type="password" placeholder="Password" name="psw" id="password" [(ngModel)]="pass" required>
+    </div>
+
+    <div class="container3">
+      <button type="submit" (click)="goToDashboardPage()">Login</button> <br>
+      <span style="margin-left: auto; margin-right: auto; color: red; ">{{validation}}</span>
+    </div>
+
+    <a href="#" class="forgottenPsw">Forgotten password?</a>
+    <hr>
+    <a href="registrationPage.html" class="createAccountBtn"> Create New Account</a>
+
+  </form>
+
+
+  <!-- <div>
+    <ul *ngFor="let item of userDetails">
+      <li>
+         {{item.name}} <br>
+         {{item.Email}} <br>
+         {{item.Password}} <br>
+         {{item.img}}
+      </li>
+    </ul>
+  </div> -->
+
+</body>

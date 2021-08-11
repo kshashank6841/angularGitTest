@@ -1,0 +1,35 @@
+.details{
+
+  width: 70%;
+
+    justify-content: space-around;
+    text-align: center;
+
+}
+
+.rows{
+    display: flex;
+    justify-content: space-around;
+margin-left: auto;
+margin-right: auto;
+}
+.rows>div{
+    text-align: center;
+      padding: 10px;
+}
+
+.aside{
+display: grid;
+border-radius:5px ;
+border: 1px solid darkmagenta;
+    width: 28%;
+    height: 90px;
+    text-align: center;
+
+}
+.aside>button{
+    background: rgb(41, 127, 224);
+color: white;
+
+font-weight: 500;
+}

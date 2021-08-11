@@ -1,1 +1,20 @@
 /* You can add global styles to this file, and also import other style files */
+/* body{
+    background-color:rgb(33, 46, 70);
+} */
+
+.ui-widget-content .ui-state-default{
+    height: 5px;
+  
+ 
+}
+
+.ui-slider-handle.ui-corner-all.ui-state-default{
+height: 12px;
+border-radius: 100%;
+background-color: rgb(255, 153, 0);
+}
+
+#slider-range{
+    height: 5px;
+}

@@ -1,0 +1,218 @@
+<html>
+<body>
+  <header>
+    <nav>
+      <div class="nav-links1">
+        <img src="../../../assets/images/logoo.png" alt="" style="width: 40px; height: 40px;" />
+        <li><button (click)='showHidesidebar()'  style="border:none; background:none; font-weight:600;">Find your home</button></li>
+        <li><a href="">Advertise</a></li>
+        <li><a href="">Sell property</a></li>
+        <li><button class="dropdown" style="background:none; border: 0; color:black;  font-family: 'Poppins', sans-serif; ">
+  <button class="btn btn-secondary dropdown-toggle" style="background:none; border: 0;   outline: none !important;
+    border: none !important;
+    box-shadow: none !important; color:black;  font-family: 'Poppins', sans-serif;font-weight:600; font-size:13px;" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+   Agent Finder
+  </button>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+    <a class="dropdown-item" href="#">Action</a>
+    <a class="dropdown-item" href="#">Another action</a>
+    <a class="dropdown-item" href="#">Something else here</a>
+
+</div></button></li>
+      </div>
+      <div class="nav-links2">
+        <ul>
+          <li><a href="" style="padding: 8px 25px; background-color: navy; color: white; border-radius: 8px;">
+         <i class="fas fa-plus" *ngIf="plus"></i>
+          <i class="fas fa-check-circle" *ngIf="tick" ></i>
+          Post your property</a></li>
+          <li><img id="img" src='{{message}}' alt="profile" style="width: 40px; height:40px; border-radius: 20px;">
+          </li>
+          <li><a href="">Welcome {{userName}} </a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <div class="sidebar-map" >
+    <div class="sidebarMenu" *ngIf="showHideSidebarMenu" trigger="sidebar" >
+      <ul>
+        <li>Property Type
+       
+        <div style="display: flex; justify-content: space-between; width: 220px; margin-left: 7%;   align-content: center;">
+          <button id="A1" class="propertyType" (click)="showDiv1()" [style.backgroundColor]="propertyTypeColor1">
+            <i class="far fa-building" style="color:rgb(37, 52, 122);" ></i>
+            <p>Apartement</p>
+          </button>
+
+          <button class="propertyType" (click)="showDiv2()" [style.backgroundColor]="propertyTypeColor2" >
+            <i class="far fa-building" style="color:rgb(37, 52, 122);"></i>
+            <p>Apartement2</p>
+          </button>
+
+          <button class="propertyType" (click)="showDiv3()" [style.backgroundColor]="propertyTypeColor3">
+            <i class="far fa-building" style="color:rgb(37, 52, 122);"></i>
+            <p>Apartement3</p>
+          </button>
+        </div>
+      </li>
+
+        <div *ngIf="showOnA2">
+          <br><br><br><br>
+          <iframe width="230" height="200" src="https://www.youtube-nocookie.com/embed/YK6hFO0gKJY"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+        </div>
+
+        <div *ngIf="showOnA3">
+          Succeed Apartment3
+        </div>
+
+        <div *ngIf="showOnA1" >
+          <li>Price Range
+            <div class="slider">
+        <div class="rangeslider">
+                                 <span class="range_min light left">10.000 $  </span>
+                                <span class="range_max light right"> 90.000 $</span>
+                                
+                                <input class="min" name="range_1" type="range" min="1" max="100" value="10" />
+                                <input class="max" name="range_1" type="range" min="1" max="100" value="90" />
+                           
+                            </div>
+                            </div>
+                         
+          </li>
+
+          <li style="margin-top:50px;">Property Room
+            <h5 style="color: gray; font-size: 14px; font-weight: bold;">Bedroom</h5>
+            <div class="parent">
+           <button class="box" (click)="boxClicked1()" [style]="boxStyle1" > 1</button>
+              &nbsp;
+              <button class="box" (click)="boxClicked2()" [style]="boxStyle2"> 2</button>
+              &nbsp;
+              <button class="box" (click)="boxClicked3()" [style]="boxStyle3"> 3</button>
+              &nbsp;
+              <button class="box" (click)="boxClicked4()" [style]="boxStyle4"> 4</button>
+              &nbsp;
+              <button class="box" (click)="boxClicked4plus()" [style]="boxStyle4plus"> 4+</button>
+         </div>
+            <h5 style="color: gray;  font-size: 14px; font-weight: bold;">Bathroom</h5>
+            <div class="parent">
+              <button class="box" (click)="boxClicked11()" [style]="boxStyle11" > 1</button>
+              &nbsp;
+              <button class="box" (click)="boxClicked22()" [style]="boxStyle22"> 2</button>
+              &nbsp;
+              <button class="box" (click)="boxClicked33()" [style]="boxStyle33"> 3</button>
+              &nbsp;
+              <button class="box" (click)="boxClicked44()" [style]="boxStyle44"> 4</button>
+              &nbsp;
+              <button class="box" (click)="boxClicked44plus()" [style]="boxStyle44plus"> 4+</button>
+            </div>
+          </li>
+
+          <li>Availability
+          <div id="availability">
+            <ul>
+              <div>
+                <li><div style="display: flex; justify-content: space-between; align-items: center; width:200px;"><button (click)="makeVisible11()" style="background: none; border: none; color: gray;">Ready to move  </button><i class="fas fa-chevron-down"></i></div></li>
+                  <span *ngIf="makeVisible1" >
+                      <br>
+                 <div class="availability-section"> <a class="dropdown-item"style="color: rgb(202, 146, 146);" href="#">Action</a>     <input type="checkbox"></div>   
+     <div class="availability-section">  <a class="dropdown-item" style="color: rgb(202, 146, 146);"href="#">Another action</a>     <input type="checkbox"></div>
+     <div class="availability-section">  <a class="dropdown-item"style="color: rgb(202, 146, 146);" href="#">Something else here</a>     <input type="checkbox"></div>
+                </span>
+            
+              </div>
+              <hr>
+              <div>
+                <li ><div style="display: flex; justify-content: space-between; align-items: center; width:200px;"><button (click)="makeVisible22()" style="background: none; border: none; color: gray;">With in 6 months  </button><i class="fas fa-chevron-down"></i></div></li>
+                   <span *ngIf="makeVisible2" >
+                      <br>
+                 <div class="availability-section"> <a class="dropdown-item"style="color: rgb(202, 146, 146);" href="#">Action</a>     <input type="checkbox"></div>   
+     <div class="availability-section">  <a class="dropdown-item" style="color: rgb(202, 146, 146);"href="#">Another action</a>     <input type="checkbox"></div>
+     <div class="availability-section">  <a class="dropdown-item"style="color: rgb(202, 146, 146);" href="#">Something else here</a>     <input type="checkbox"></div>
+                </span>
+              </div>
+              <hr>
+              <div>
+                <li><div style="display: flex; justify-content: space-between; align-items: center; width:200px;"><button (click)="makeVisible33()" style="background: none; border: none; color: gray;">With in 1 year  </button><i class="fas fa-chevron-down"></i></div></li>
+                   <span *ngIf="makeVisible3" >
+                      <br>
+                 <div class="availability-section"> <a class="dropdown-item"style="color: rgb(202, 146, 146);" href="#">Action</a>     <input type="checkbox"></div>   
+     <div class="availability-section">  <a class="dropdown-item" style="color: rgb(202, 146, 146);"href="#">Another action</a>     <input type="checkbox"></div>
+     <div class="availability-section">  <a class="dropdown-item"style="color: rgb(202, 146, 146);" href="#">Something else here</a>     <input type="checkbox"></div>
+                </span>
+              </div>
+              <hr>
+              <div>
+                <li><div style="display: flex; justify-content: space-between; align-items: center; width:200px;"><button (click)="makeVisible44()" style="background: none; border: none; color: gray;">More than 1 year</button><i class="fas fa-chevron-down" *ngIf="down44"></i><i class="fas fa-chevron-up" *ngIf="up44"></i></div></li>
+            
+                 <span *ngIf="makeVisible4" >
+                      <br>
+                 <div class="availability-section"> <a class="dropdown-item"style="color: rgb(202, 146, 146);" href="#">Action</a>     <input type="checkbox"></div>   
+     <div class="availability-section">  <a class="dropdown-item" style="color: rgb(202, 146, 146);"href="#">Another action</a>     <input type="checkbox"></div>
+     <div class="availability-section">  <a class="dropdown-item"style="color: rgb(202, 146, 146);" href="#">Something else here</a>     <input type="checkbox"></div>
+                </span>
+              </div>
+              <hr>
+            </ul>
+          </div>
+        </li>
+
+          <li>Property Size
+          <div>
+            <div class="slider">
+   <div class="rangeslider">
+                                <input class="min" name="range_1" type="range" min="1" max="100" value="10" />
+                                <input class="max" name="range_1" type="range" min="1" max="100" value="90" />
+                                <span class="range_min light lefts">10.000 sqft - </span>
+                                <span class="range_max light right"> 90.000 sqft</span>
+                            </div>
+                            </div>
+          </div>
+ 
+</li>
+
+          <li style="margin-top:30px;">
+            <br>
+            <div style="display: flex; justify-content: space-between;">
+              <button class="reset-apply" (click)="reset()">Reset</button>
+              <button class="reset-apply" (click)="apply()" [style]="applyStyle"><div *ngIf="ifClicked"><i class="fas fa-check-circle" ></i></div> &nbsp; Apply</button>
+            </div>
+          </li>
+        </div>
+      </ul>
+    </div>
+<!--map---------------------------------------------------------------->
+    <div [style.backgroundColor]="bgcolors" [style.width]="width" style="background: red; height: 500px;">
+      <div id="map" class="map" [style]="mapStyle"></div>
+    </div>
+    <div class="searchBox">
+        <button class="btn btn-secondary dropdown-toggle" style="background:none; border: 0;   outline: none !important;
+    border: none !important; margin-top: 5px; margin-left: 5px;
+    box-shadow: none !important; color:black;  font-family: 'Poppins', sans-serif;font-weight:600; font-size:13px;" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+   Buy
+  </button>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" >
+    <a class="dropdown-item" href="#">Buy</a>
+    <a class="dropdown-item" href="#">Sell</a>
+</div>
+
+    <input  type="text" style="margin:-20px 10px 0px 50px; border:none; width:  240px; font-size: 14px;"> 
+   </div>
+    <button class="shrink" (click)='showHidesidebar()' onClick = "changeMapStyle()" *ngIf="hide"><i class="fas fa-chevron-circle-left"  [style]="iconStyle"></i></button>
+  
+     <button class="shrink" (click)='showHidesidebar()' onClick = "changeMapStyle()" *ngIf="show" ><i class="fas fa-chevron-circle-right"  [style]="iconStyle"></i></button>
+  
+  </div>
+<!--popup----------------------------------------------------------------->
+  <button id="popup" class="ol-popup" (click)="goToProprtyDetailsPage()" >
+    <a id="popup-closer" class="ol-popup-closer"></a>
+    <button id="popup-content" style="border:none; background: none;"></button>
+  </button>
+<!--------------------------------------------------------------------------->
+<!-- <div style="background: crimson;" [style]="mapStyle"></div> -->
+</body>
+</html>
