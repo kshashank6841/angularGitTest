@@ -8,14 +8,6 @@ import { LoginComponent } from './components/login/login.component';
 import { NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { PropertyDetailsComponent } from './components/property-details/property-details.component';
 import { StoreModule } from '@ngrx/store';
-
-// import { StoreDevtoolsModule } from '@ngrx/store-devtools';
-import { environment } from '../environments/environment';
-// import { EffectsModule } from '@ngrx/effects';
-
-import { MdbCheckboxModule } from 'mdb-angular-ui-kit/checkbox';
-
-import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { propertyReducer } from './components/state/property.reducer';
 
 
@@ -31,9 +23,7 @@ import { propertyReducer } from './components/state/property.reducer';
     AppRoutingModule,
     FormsModule,
     NgbModule,
-    MdbCheckboxModule,
-    StoreModule.forRoot({ propertyReducer: propertyReducer }),
-    MDBBootstrapModule.forRoot()
+    StoreModule.forRoot({ propertyReducer: propertyReducer })
  
  
     // !environment.production ? StoreDevtoolsModule.instrument() : [],

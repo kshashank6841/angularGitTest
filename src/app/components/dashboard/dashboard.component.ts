@@ -3,41 +3,26 @@ import forRentCoord from 'src/assets/Json/forRentCoord.json';
 import forSellCoord from 'src/assets/Json/forSellCoord.json';
 
 import Map from 'ol/Map';
-import Tile from 'ol/layer/Tile';
 import OSM from 'ol/source/OSM';
 import View from 'ol/View';
 import { fromLonLat } from 'ol/proj';
 
 import Overlay from 'ol/Overlay';
-import  TileJSON  from 'ol/source/TileJSON';
 import Feature from 'ol/Feature';
 import Point from 'ol/geom/Point';
-//import { Tile as TileLayer, Vector as VectorLayer } from 'ol/layer';
 import VectorSource from 'ol/source/Vector';
 import { Icon, Style } from 'ol/style';
-import { Modify } from 'ol/interaction';
-import OverlayPositioning from 'ol/OverlayPositioning';
-import { toStringHDMS } from 'ol/coordinate.js';
-import { toLonLat } from 'ol/proj.js';
 import TileLayer from 'ol/layer/Tile';
 import VectorLayer from 'ol/layer/Vector';
-import * as $ from 'jquery';
-import { Popover  } from 'bootstrap';
-import { Image } from 'ol';
 import { ShareDataService } from '../share-data.service';
-import 'jquery-ui';
 import { Router } from '@angular/router';
 import ForRentCoord from 'src/assets/Json/forRentCoord.json';
 import ForSellCoord from 'src/assets/Json/forSellCoord.json';
-import { analyzeAndValidateNgModules } from '@angular/compiler';
 import { Store } from '@ngrx/store';
 
 import { filter } from '../state/property.actions';
 
-declare function myFun(): void;
 declare function twoInputRange(): [];
-// declare function showHideSidebarMenu(): void;
-declare function MapStyle():void ;
 
 @Component({
   selector: 'app-dashboard',
@@ -514,9 +499,13 @@ showHidesidebar(){
       {
         return feature;
           });
+    try {
       this.longitutde = feature.get('Lon');
       this.latitude = feature.get('Lat');
       console.log(`${this.longitutde} and ${feature.get('Lat')}`);
+    } catch (error) {
+      
+    }
       if (map.hasFeatureAtPixel(event.pixel) === true) {
         var coordinate = event.coordinate;
 

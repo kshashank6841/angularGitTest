@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { ShareDataService } from '../share-data.service';
-import forRentCoord from 'src/assets/Json/forRentCoord.json';
-import forSellCoord from 'src/assets/Json/forSellCoord.json';
 import { Router } from '@angular/router';
 
 
