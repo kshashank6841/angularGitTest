@@ -418,7 +418,7 @@ showHidesidebar(){
         image: new Icon(({
           // color: '#8959A8',
           crossOrigin: 'anonymous',
-          src: '../assets/images/pin6.png',
+          src: './assets/images/pin6.png',
           scale: .08,
           // imgSize: [100, 100]
         }))
@@ -442,7 +442,7 @@ showHidesidebar(){
         image: new Icon(({
           // color: '#8959A8',
           crossOrigin: 'anonymous',
-          src: '../assets/images/pin12.png',
+          src: './assets/images/pin12.png',
           scale: 0.08,
 
         }))
@@ -457,22 +457,6 @@ showHidesidebar(){
     this.vectorLayer = new VectorLayer({
       source: this.vectorSource
     });
-
-    // this.rasterLayer = new TileLayer({
-    //   source: new TileJSON({
-    //     url: 'https://a.tiles.mapbox.com/v3/aj.1x1-degrees.json?secure=1',
-    //     crossOrigin: 'anonymous'
-    //   })
-    // });
-
-    // this.map = new Map({
-    //   target: 'map',
-    //   layers: [this.rasterLayer, this.vectorLayer],
-    //   view: new View({
-    //     center: fromLonLat([-103.1189090004137, 40.92062772664223]),
-    //     zoom: 4.5
-    //   })
-    // });
 
     const overlay = new Overlay({
       element: container!,
